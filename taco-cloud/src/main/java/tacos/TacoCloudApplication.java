@@ -2,8 +2,8 @@ package tacos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-//Hello my friend
-//21343;1jk;12
+
+
 @SpringBootApplication
 public class TacoCloudApplication {
 
