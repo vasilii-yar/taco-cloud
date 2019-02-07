@@ -39,6 +39,6 @@ public class DesignTacoController {
 	}
 	
 	private List<Ingredient> filterByType(List<Ingredient> l, Type t) {
-		return l.stream().filter(x -> x.getClass().equals(t)).collect(Collectors.toList());
+		return l.stream().filter(x -> x.getType().equals(t)).collect(Collectors.toList());
 	}
 }
