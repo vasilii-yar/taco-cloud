@@ -1,7 +1,10 @@
 package tacos.web;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +23,10 @@ public class OrderCurrentController {
     	return "orderForm";
     }
     @PostMapping
-    public String processOrdering(Order order) {
+    public String processOrdering(@Valid Order order, Errors error) {
+    	if (error.hasErrors()) {
+    		return "orderForm";
+    	}
     	log.info("Processing ordering: " + order);
     	return "redirect:/";
     } 
