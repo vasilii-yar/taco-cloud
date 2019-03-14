@@ -1,5 +1,6 @@
 package tacos;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import javax.validation.constraints.Digits;
@@ -9,6 +10,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.CreditCardNumber;
 
 import lombok.Data;
+import tacos.Taco;
 
 @Data
 public class Order {
@@ -30,4 +32,9 @@ public class Order {
     private String ccExpiration;
 	@Digits(integer=3, fraction=0, message="Invalid CVV code")
     private String ccCVV;
+	
+	private ArrayList<Taco> tacos = new ArrayList<>();
+	public void addDesign(Taco taco) {
+		this.tacos.add(taco);
+	}
 }
