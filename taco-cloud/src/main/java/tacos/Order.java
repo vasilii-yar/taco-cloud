@@ -2,6 +2,7 @@ package tacos;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
@@ -33,7 +34,7 @@ public class Order {
 	@Digits(integer=3, fraction=0, message="Invalid CVV code")
     private String ccCVV;
 	
-	private ArrayList<Taco> tacos = new ArrayList<>();
+	private List<Taco> tacos = new ArrayList<>();
 	public void addDesign(Taco taco) {
 		this.tacos.add(taco);
 	}

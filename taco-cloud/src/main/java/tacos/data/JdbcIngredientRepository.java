@@ -20,17 +20,17 @@ public class JdbcIngredientRepository implements IngredientRepository {
 
 	@Override
 	public Iterable<Ingredient> findAll() {
-		return jdbc.query("select id, name, type from Ingredients", this::mapRowToIngredient);
+		return jdbc.query("select id, name, type from Ingredient", this::mapRowToIngredient);
 	}
 
 	@Override
 	public Ingredient findOne(String id) {
-		return jdbc.queryForObject("select id, neme, type from Ingredients where id=?", this::mapRowToIngredient, id);
+		return jdbc.queryForObject("select id, neme, type from Ingredient where id=?", this::mapRowToIngredient, id);
 	}
 
 	@Override
 	public Ingredient save(Ingredient ing) {
-		jdbc.update("insert into Ingredients (id, name, type) values (?, ?, ?)", 
+		jdbc.update("insert into Ingredient (id, name, type) values (?, ?, ?)", 
 				ing.getId(), 
 				ing.getName(), 
 				ing.getType().toString());
