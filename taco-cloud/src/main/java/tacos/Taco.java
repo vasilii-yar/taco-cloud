@@ -12,12 +12,11 @@ import lombok.Data;
 @Data
 public class Taco {
 	private long id;
+	private Date createAt;
 	@NotNull
 	@Size(min=5, message="Name must be at least 5 characters long")
 	private String name;
 	
 	@Size(min=1, message="You mast choose at least 1 ingredients")
 	private List<Ingredient> ingredients;
-	
-	private Date createAt;
 }

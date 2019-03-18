@@ -24,17 +24,17 @@ public class JdbcIngredientRepository implements IngredientRepository {
 	}
 
 	@Override
-	public Ingredient findOne(String id) {
-		return jdbc.queryForObject("select id, neme, type from Ingredient where id=?", this::mapRowToIngredient, id);
+	public Ingredient findById(String id) {
+		return jdbc.queryForObject("select id, name, type from Ingredient where id=?", this::mapRowToIngredient, id);
 	}
 
 	@Override
-	public Ingredient save(Ingredient ing) {
+	public Ingredient save(Ingredient ingredient) {
 		jdbc.update("insert into Ingredient (id, name, type) values (?, ?, ?)", 
-				ing.getId(), 
-				ing.getName(), 
-				ing.getType().toString());
-		return ing;
+				ingredient.getId(), 
+				ingredient.getName(), 
+				ingredient.getType().toString());
+		return ingredient;
 	}
 	
 	private Ingredient mapRowToIngredient(ResultSet rs, int rowNum) throws SQLException {

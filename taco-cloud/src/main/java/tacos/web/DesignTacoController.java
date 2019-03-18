@@ -29,7 +29,6 @@ import tacos.data.IngredientRepository;
 import tacos.data.JdbcIngredientRepository;
 import tacos.data.TacoRepository;
 
-@Slf4j
 @Controller
 @RequestMapping("/design")
 @SessionAttributes("order")
