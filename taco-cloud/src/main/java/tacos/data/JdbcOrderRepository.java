@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import tacos.Order;
 import tacos.Taco;
 
-@Repository
+/*@Repository
 public class JdbcOrderRepository implements OrderRepository {
     private SimpleJdbcInsert orderIns;
     private SimpleJdbcInsert orderTacoIns;
@@ -55,4 +55,4 @@ public class JdbcOrderRepository implements OrderRepository {
 		values.put("taco", taco.getId());
 		orderTacoIns.execute(values);
 	}
-}
+}*/

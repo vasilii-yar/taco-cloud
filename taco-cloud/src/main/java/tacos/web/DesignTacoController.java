@@ -26,7 +26,6 @@ import tacos.Ingredient.Type;
 import tacos.Order;
 import tacos.Taco;
 import tacos.data.IngredientRepository;
-import tacos.data.JdbcIngredientRepository;
 import tacos.data.TacoRepository;
 
 @Controller

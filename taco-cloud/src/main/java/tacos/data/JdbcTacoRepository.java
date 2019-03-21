@@ -18,7 +18,7 @@ import org.springframework.stereotype.Repository;
 import tacos.Ingredient;
 import tacos.Taco;
 
-@Repository
+/*@Repository
 public class JdbcTacoRepository implements TacoRepository {
     private JdbcTemplate jdbc = new JdbcTemplate();
     
@@ -53,4 +53,4 @@ public class JdbcTacoRepository implements TacoRepository {
 		);
 	}
     
-}
+}*/
