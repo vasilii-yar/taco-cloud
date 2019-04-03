@@ -22,7 +22,7 @@ public class TacoCloudApplication implements WebMvcConfigurer {
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/").setViewName("home");
 	}*/
-	
+	// test comments
 	// For Spring Data JPA.
 	  @Bean
 	  public CommandLineRunner dataLoader(IngredientRepository repo) {
